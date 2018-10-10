@@ -1,0 +1,23 @@
+<tmfxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../org.eclipse.tracecompass.tmf.analysis.xml.core/src/org/eclipse/tracecompass/tmf/analysis/xml/core/module/xmlDefinition.xsd">
+    <timeGraphView id="my.vcpu.time.graph.view">
+        <head>
+            <analysis id="org.eclipse.tracecompass.incubator.virtual.machine.analysis.VMblockAnalysis" />
+            <label value="vCPU View" />
+        </head>
+
+		<definedValue name="Root" value="1" color="#2ca25f" />
+		<definedValue name="non-Root" value="2" color="#2ca25f" />
+		<definedValue name="Preempted Level 0" value="3" color="#999999" />
+		<definedValue name="Task" value="6" color="#fff7bc" />
+		<definedValue name="Timer" value="7" color="#a6bddb" />
+		<definedValue name="Disk" value="8" color="#e41a1c" />
+		<definedValue name="Net" value="9" color="#984ea3" />
+
+		<entry path="VMs/*">
+			<display type="self" />
+			<entry path="vCPU/*" >
+				<display type="constant" value="Status" />
+			</entry>
+        </entry>
+    </timeGraphView>
+</tmfxml>

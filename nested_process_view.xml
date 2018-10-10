@@ -1,0 +1,29 @@
+<tmfxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../org.eclipse.tracecompass.tmf.analysis.xml.core/src/org/eclipse/tracecompass/tmf/analysis/xml/core/module/xmlDefinition.xsd">
+    <timeGraphView id="process.nested.vm.time.graph.view">
+        <head>
+            <analysis id="org.eclipse.tracecompass.incubator.virtual.machine.analysis.VMblockAnalysis" />
+            <label value="Nested VM Process View" />
+        </head>
+
+		<definedValue name="Root" value="1" color="#f46d43" />
+		<definedValue name="non-Root" value="2" color="#fdae61" />
+		<definedValue name="Preempted Level 0" value="3" color="#999999" />
+		<definedValue name="Task" value="6" color="#fff7bc" />
+		<definedValue name="Timer" value="7" color="#a6bddb" />
+		<definedValue name="Disk" value="8" color="#e41a1c" />
+		<definedValue name="Net" value="9" color="#984ea3" />
+		<definedValue name="Block" value="10" color="#D3D3D3" />
+		<definedValue name="non-Root-L2" value="15" color="#1a9850" />
+
+
+		<entry path="VMs/*">
+			<display type="self" />
+				<entry path="Nested/*">
+				    <display type="self" />
+					<entry path="Process/*">
+					<display type="constant" value="Status" />
+				</entry>
+					</entry>
+        </entry>
+    </timeGraphView>
+</tmfxml>

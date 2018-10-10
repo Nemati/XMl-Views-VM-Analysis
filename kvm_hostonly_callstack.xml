@@ -1,0 +1,13 @@
+<tmfxml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../org.eclipse.tracecompass.tmf.analysis.xml.core/src/org/eclipse/tracecompass/tmf/analysis/xml/core/module/xmlDefinition.xsd">
+<callstack id="org.eclipse.tracecompass.incubator.analysis.os.linux.kernel">
+<callstackGroup name="KVM threads callstack">
+<level path="VMs/*"/>
+<level path="Process/*"/>
+<level path="Status"/>
+<thread level="1" type="value" />
+<host level="0" />
+</callstackGroup>
+<analysis id="org.eclipse.tracecompass.incubator.virtual.machine.analysis.VMblockAnalysis"/>
+</callstack>
+</tmfxml>
+
